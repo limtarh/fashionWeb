@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
+require('dotenv').config()
 const mysql = require('mysql2')
-console.log("mysql")
+
 
 function Outfit(){
     return(
@@ -65,6 +67,9 @@ function Shoes(){
 }
 
 function Suggest(){
+    const connection = mysql.createConnection(process.env.DATABASE_URL)
+    console.log('Connected to PlanetScale!')
+    connection.end()
     return(
         <>
             <h1>Suggestions</h1>
