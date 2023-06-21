@@ -1,9 +1,9 @@
 import React from "react";
 
-function Inventory(){
+function prevsug(){
     return(
-        <h1>Inventory</h1>
+        <h1>Previous Suggestion</h1>
     )
 }
 
-export default Inventory;
+export default prevsug;
