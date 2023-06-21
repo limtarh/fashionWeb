@@ -2,17 +2,17 @@ import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar';
 
 export default function Home() {
+  require('dotenv').config()
+  //const mysql = require('mysql2')
+  //const connection = mysql.createConnection(process.env.DATABASE_URL)
+  //console.log('Connected to PlanetScale!')
+  //onnection.end()
   return (
     <div className={styles.container}>
       <>
         <Navbar/>
       </>
 
-      require('dotenv').config()
-      const mysql = require('mysql2')
-      const connection = mysql.createConnection(process.env.DATABASE_URL)
-      console.log('Connected to PlanetScale!')
-      connection.end()
 
 
       <style jsx>{`

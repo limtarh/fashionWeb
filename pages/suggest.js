@@ -74,3 +74,5 @@ function Suggest(){
 
     )
 }
+
+export default Suggest;
