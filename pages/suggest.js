@@ -69,6 +69,7 @@ function Shoes(){
 function Suggest(){
     const connection = mysql.createConnection(process.env.DATABASE_URL)
     console.log('Connected to PlanetScale!')
+    console.log(connection)
     connection.end()
     return(
         <>
