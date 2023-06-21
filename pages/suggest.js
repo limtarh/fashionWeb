@@ -69,7 +69,14 @@ function Shoes(){
 function Suggest(){
     const connection = mysql.createConnection(process.env.DATABASE_URL)
     console.log('Connected to PlanetScale!')
-    console.log(connection)
+    connection.query(
+        "SELECT * FROM `inventory`",
+        function(err, results, fields) {
+          console.log(err);
+          console.log(results); // results contains rows returned by server
+          console.log(fields); // fields contains extra meta data about results, if available
+        }
+      );
     connection.end()
     return(
         <>
